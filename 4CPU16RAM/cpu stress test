@@ -70,3 +70,66 @@ Size   LDA    Align.  Average  Maximal
 Residual checks PASSED
 
 End of tests
+---------------------------------------------------------------------------
+sysbench cpu run
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   642.49
+
+General statistics:
+    total time:                          10.0016s
+    total number of events:              6429
+
+Latency (ms):
+         min:                                  1.04
+         avg:                                  1.55
+         max:                                  9.61
+         95th percentile:                      1.70
+         sum:                               9990.63
+
+Threads fairness:
+    events (avg/stddev):           6429.0000/0.00
+    execution time (avg/stddev):   9.9906/0.00
+==================================================================
+sysbench threads run
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+
+General statistics:
+    total time:                          10.0007s
+    total number of events:              11904
+
+Latency (ms):
+         min:                                  0.63
+         avg:                                  0.84
+         max:                                  5.76
+         95th percentile:                      0.92
+         sum:                               9984.78
+
+Threads fairness:
+    events (avg/stddev):           11904.0000/0.00
+    execution time (avg/stddev):   9.9848/0.00
+    ==========================================================
+    
+    
