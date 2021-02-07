@@ -1,0 +1,72 @@
+processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 63
+model name      : Intel(R) Xeon(R) CPU @ 2.30GHz
+stepping        : 0
+microcode       : 0x1
+cpu MHz         : 2299.998
+cache size      : 46080 KB
+physical id     : 0
+siblings        : 4
+core id         : 1
+cpu cores       : 2
+apicid          : 2
+initial apicid  : 2
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt arat md_clear arch_capabilities
+bugs            : cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs
+bogomips        : 4599.99
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 46 bits physical, 48 bits virtual
+===============================================
+CPU test stress - LINPACK Benchmark for Linux
+===============================================
+Current date/time: Sat Feb  6 19:38:27 2021
+
+CPU frequency:    2.580 GHz
+Number of CPUs: 1
+Number of cores: 2
+Number of threads: 2
+
+Parameters are set to:
+
+Number of tests: 5
+Number of equations to solve (problem size) : 1000  2000  5000  10000 20000
+Leading dimension of array                  : 1000  2000  5008  10000 20000
+Number of trials to run                     : 4     2     2     2     1
+Data alignment value (in Kbytes)            : 4     4     4     4     4
+
+Maximum memory requested that can be used=3200404096, at the size=20000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+1000   1000   4      0.028      24.1694  9.394430e-13 3.203742e-02   pass
+1000   1000   4      0.026      25.3390  9.394430e-13 3.203742e-02   pass
+1000   1000   4      0.045      14.8154  9.394430e-13 3.203742e-02   pass
+1000   1000   4      0.034      19.8842  9.394430e-13 3.203742e-02   pass
+2000   2000   4      0.165      32.3852  4.085732e-12 3.554086e-02   pass
+2000   2000   4      0.187      28.6217  4.085732e-12 3.554086e-02   pass
+5000   5008   4      2.538      32.8604  2.262585e-11 3.154992e-02   pass
+5000   5008   4      2.483      33.5796  2.262585e-11 3.154992e-02   pass
+10000  10000  4      20.492     32.5433  9.187981e-11 3.239775e-02   pass
+10000  10000  4      20.122     33.1410  9.187981e-11 3.239775e-02   pass
+20000  20000  4      126.668    42.1111  3.669736e-10 3.248520e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+1000   1000   4       21.0520  25.3390
+2000   2000   4       30.5035  32.3852
+5000   5008   4       33.2200  33.5796
+10000  10000  4       32.8421  33.1410
+20000  20000  4       42.1111  42.1111
+
+Residual checks PASSED
+
+End of tests
