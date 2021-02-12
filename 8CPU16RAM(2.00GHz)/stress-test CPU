@@ -1,0 +1,87 @@
+cpu family      : 6
+model           : 85
+model name      : Intel(R) Xeon(R) CPU @ 2.00GHz
+stepping        : 3
+microcode       : 0x1
+cpu MHz         : 1999.999
+cache size      : 39424 KB
+
+./xlinpack_xeon64 -i ./my_test
+Sample data file lininput_xeon64.
+
+Current date/time: Fri Feb 12 19:25:09 2021
+
+CPU frequency:    2.582 GHz
+Number of CPUs: 1
+Number of cores: 4
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 5
+Number of equations to solve (problem size) : 1000  2000  5000  10000 20000
+Leading dimension of array                  : 1000  2000  5008  10000 20000
+Number of trials to run                     : 4     2     2     2     1    
+Data alignment value (in Kbytes)            : 4     4     4     4     4    
+
+Maximum memory requested that can be used=3200404096, at the size=20000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+1000   1000   4      0.015      45.3179  9.512946e-13 3.244159e-02   pass
+1000   1000   4      0.013      50.1815  9.512946e-13 3.244159e-02   pass
+1000   1000   4      0.012      57.8624  9.512946e-13 3.244159e-02   pass
+1000   1000   4      0.011      60.3436  9.512946e-13 3.244159e-02   pass
+2000   2000   4      0.059      89.8308  4.404047e-12 3.830981e-02   pass
+2000   2000   4      0.063      84.3185  4.404047e-12 3.830981e-02   pass
+5000   5008   4      0.772      108.0010 2.376432e-11 3.313743e-02   pass
+5000   5008   4      0.729      114.4300 2.376432e-11 3.313743e-02   pass
+10000  10000  4      6.282      106.1572 8.501502e-11 2.997716e-02   pass
+10000  10000  4      6.318      105.5469 8.501502e-11 2.997716e-02   pass
+20000  20000  4      42.964     124.1525 3.714703e-10 3.288326e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+1000   1000   4       53.4264  60.3436 
+2000   2000   4       87.0747  89.8308 
+5000   5008   4       111.2155 114.4300
+10000  10000  4       105.8521 106.1572
+20000  20000  4       124.1525 124.1525
+
+Residual checks PASSED
+
+End of tests
+===============================================================================
+sysbench 1.0.11 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 10000
+
+Initializing worker threads...
+
+Threads started!
+
+CPU speed:
+    events per second:   754.52
+
+General statistics:
+    total time:                          10.0004s
+    total number of events:              7547
+
+Latency (ms):
+         min:                                  1.04
+         avg:                                  1.32
+         max:                                  5.59
+         95th percentile:                      1.67
+         sum:                               9989.44
+
+Threads fairness:
+    events (avg/stddev):           7547.0000/0.00
+    execution time (avg/stddev):   9.9894/0.00
+    ============================================================================
